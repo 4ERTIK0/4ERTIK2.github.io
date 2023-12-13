@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О нас</title>
+    <link rel="stylesheet" href="autor.css" />
+    <link rel="icon" href="kandinsky-download-1701634859098.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script>
+    function showAlert() {
+      alert("Ведутся технические работы");
+    }
+  </script>
+  <body>
+    <header class="header">
+      <div class="big-container">
+        <nav class="nav">
+          <ul class="menu-list menu-left">
+            <li class="menu-item">
+              <a href="Home.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="registration.html" class="menu-link">Регистрация</a>
+            </li>
+            <li class="menu-item">
+              <a href="shop1.html" class="menu-link">Магазин</a>
+            </li>
+          </ul>
+          <a href="Home.html" class="logo">
+            <img
+              src="kandinsky-download-1701634859098.png"
+              alt="logo"
+              class="logo-img"
+          /></a>
+          <ul class="menu-list menu-right">
+            <li class="menu-item">
+              <a href="partners.html" class="menu-link">Партнеры</a>
+            </li>
+            <li class="menu-item">
+              <a href="autor.html" class="menu-link">О нас</a>
+            </li>
+          </ul>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul class="menu-mobile dropdown_menu">
+            <li class="menu-item">
+              <a href="Home.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="registration.html" class="menu-link">Регистрация</a>
+            </li>
+            <li class="menu-item">
+              <a href="shop1.html" class="menu-link">Магазин</a>
+            </li>
+            <li class="menu-item">
+              <a href="partners.html" class="menu-link">Партнеры</a>
+            </li>
+            <li class="menu-item">
+              <a href="autor.html" class="menu-link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="card">
+      <div class="img-bx">
+        <img src="e5NBCKnH-IU.jpg" alt="img author" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Булатов Евгений<br /><span>Модмейкер</span></h2>
+          <ul class="sci">
+            <li>
+              <a href="https://vk.com/dream_dragon636" target="_blank">
+                <i class="fab fa-brands fa-vk"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://discord.gg/5fKTR5hAeB" target="_blank"
+                ><i class="fab fa-brands fa-discord"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@AsCoRe" target="_blank"
+                ><i class="fab fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href=" https://patreon.com/ACR952 " target="_blank"
+                ><i class="fab fa-brands fa-patreon"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
