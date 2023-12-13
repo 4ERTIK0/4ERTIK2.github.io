@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="shop1.css" />
+    <title>Магазин</title>
+    <link rel="icon" href="kandinsky-download-1701634859098.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script>
+    function showAlert() {
+      alert("Ведутся технические работы");
+    }
+  </script>
+
+  <body>
+    <body>
+      <header class="header">
+        <div class="big-container">
+          <nav class="nav">
+            <ul class="menu-list menu-left">
+              <li class="menu-item">
+                <a href="Home.html" class="menu-link">Главная</a>
+              </li>
+              <li class="menu-item">
+                <a href="registration.html" class="menu-link">Регистрация</a>
+              </li>
+              <li class="menu-item">
+                <a href="shop1.html" class="menu-link">Магазин</a>
+              </li>
+            </ul>
+            <a href="Home.html" class="logo">
+              <img
+                src="kandinsky-download-1701634859098.png"
+                alt="logo"
+                class="logo-img"
+            /></a>
+            <ul class="menu-list menu-right">
+              <li class="menu-item">
+                <a href="partners.html" class="menu-link">Партнеры</a>
+              </li>
+              <li class="menu-item">
+                <a href="autor.html" class="menu-link">О нас</a>
+              </li>
+            </ul>
+            <div class="toggle_btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="menu-mobile dropdown_menu">
+              <li class="menu-item">
+                <a href="Home.html" class="menu-link">Главная</a>
+              </li>
+              <li class="menu-item">
+                <a href="registration.html" class="menu-link">Регистрация</a>
+              </li>
+              <li class="menu-item">
+                <a href="shop1.html" class="menu-link">Магазин</a>
+              </li>
+              <li class="menu-item">
+                <a href="partners.html" class="menu-link">Партнеры</a>
+              </li>
+              <li class="menu-item">
+                <a href="autor.html" class="menu-link">О нас</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <a href="product.html" alt="p" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img
+              src="shop/1692237893_myskillsconnect-com-p-foto-porshe-sverkhu-15.jpg"
+              class="cover-image"
+            />
+          </div>
+          <img
+            src="shop/pngwing.com - 2023-12-11T183955.356.png"
+            class="title"
+          />
+          <img
+            src="shop/pngwing.com - 2023-12-11T184100.020.png"
+            class="character"
+          />
+        </div>
+      </a>
+      <div class="info">
+        <a href="product.html" class="info_1">Porshe</a>
+        <a href="product2.html" class="info_1">Ferrari</a>
+        <a href="product3.html" class="info_1">Nissan GTR</a>
+        <a href="product4.html" class="info_1">Lamborghini</a>
+      </div>
+      <a href="product2.html" alt="f" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img
+              src="shop/1639445687_3-sportishka-com-p-av.jpg"
+              class="cover-image"
+            />
+          </div>
+          <img src="shop/pngwing.com - 2023-12-11T192941..png" class="title" />
+          <img
+            src="shop/pngwing.com - 2023-12-11T194113..png"
+            class="character"
+          />
+        </div>
+      </a>
+
+      <a href="product3.html" alt="n" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img
+              src="shop/e449cb9aef8bee8355a5fa31054f6ceb (1).jpg"
+              class="cover-image"
+            />
+          </div>
+          <img
+            src="shop/pngwing.com - 2023-12-11T195248.967.png"
+            class="title"
+          />
+          <img
+            src="shop/pngwing.com - 2023-12-11T200801..png"
+            class="character"
+          />
+        </div>
+      </a>
+      <a href="product4.html" alt="l" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="shop/1580x1140.jpg" class="cover-image" />
+          </div>
+          <img
+            src="shop/pngwing.com - 2023-12-11T201944.647.png"
+            class="title"
+          />
+          <img
+            src="shop/pngwing.com - 2023-12-11T202127..png"
+            class="character"
+          />
+        </div>
+      </a>
+
+      <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const dropDownMenu = document.querySelector(".dropdown_menu");
+
+        toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle("open");
+          const isOpen = dropDownMenu.classList.contains("open");
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+      </script>
+    </body>
+  </body>
+</html>

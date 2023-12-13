@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lamborghini товар</title>
+    <link rel="stylesheet" href="product4.css" />
+    <link rel="icon" href="kandinsky-download-1701634859098.png" />
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="imgBx">
+        <img
+          src="product/pngwing.com - 2023-12-11T220313.641.png"
+          alt="Nike Jordan Proto-Lyte Image"
+        />
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>
+            Lamborghini <br />
+            <span>HYPERCAR COLLECTION</span>
+          </h2>
+          <p>
+            Машины Lamborghini могут заинтересовать людей, которые ценят высокую
+            производительность, роскошный дизайн и эксклюзивность.</br>Автолюбители мечтают о возможности владеть мощным спортивным автомобилем, способным разгоняться до высоких скоростей и обладающим выдающимися техническими характеристиками.</br>Для многих машины Lamborghini представляют истинное произведение искусства и статусный элемент коллекции автомобилей.
+          </p>
+          <p class="product-colors">
+            Доступные цвета:
+            <span
+              class="black active"
+              data-color-primary="#cfcfcf"
+              data-color-sec="#e0e0e0"
+              data-pic="product/pngwing.com - 2023-12-11T220313.641.png"
+            ></span>
+            <span
+              class="red"
+              data-color-primary="#e0ad2b"
+              data-color-sec="#ffda7d"
+              data-pic="product/pngwing.com - 2023-12-11T220306.011.png"
+            ></span>
+            <span
+              class="orange"
+              data-color-primary="#0d178c"
+              data-color-sec="#0353a6"
+              data-pic="product/pngwing.com - 2023-12-11T220317.470.png"
+            ></span>
+          </p>
+          <h3>650,000 $.</h3>
+          <button>Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".product-colors span").click(function () {
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $(".active").css("border-color", $(this).attr("data-color-sec"));
+        $("body").css("background", $(this).attr("data-color-primary"));
+        $(".content h2").css("color", $(this).attr("data-color-sec"));
+        $(".content h3").css("color", $(this).attr("data-color-sec"));
+        $(".container .imgBx").css(
+          "background",
+          $(this).attr("data-color-sec")
+        );
+        $(".container .details button").css(
+          "background",
+          $(this).attr("data-color-sec")
+        );
+        $(".imgBx img").attr("src", $(this).attr("data-pic"));
+      });
+    </script>
+  </body>
+</html>

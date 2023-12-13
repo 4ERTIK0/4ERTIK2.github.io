@@ -1,0 +1,100 @@
+/* Хэдер */
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.action_btn {
+  z-index: 1000;
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action_btn:hover {
+  z-index: 1000;
+  scale: 1.2;
+  transition: 0.5s ease-in-out;
+  color: #fff;
+}
+
+.action_btn:active {
+  z-index: 1000;
+  scale: 0.9;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px; /*Тут px как height в section#hero */
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  z-index: 1000;
+  height: 173px;
+}
+
+.dropdown_menu li {
+  z-index: 1000;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  footer {
+    min-height: 1000px;
+  }
+  footer .menu li a {
+    margin-top: 0.7em;
+  }
+
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    z-index: 2000;
+    display: block;
+  }
+
+  .dropdown_menu {
+    z-index: 1000;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    min-height: 1000px;
+  }
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}

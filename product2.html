@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ferrari товар</title>
+    <link rel="stylesheet" href="product2.css" />
+    <link rel="icon" href="kandinsky-download-1701634859098.png" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="imgBx">
+        <img
+          src="product/pngwing.com - 2023-12-11T214336.118.png"
+          alt="Nike Jordan Proto-Lyte Image"
+        />
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>
+            FERRARI <br />
+            <span>Elegant Collection</span>
+          </h2>
+          <p>
+            Автомобили Ferrari отличаются инновационными технологиями и
+            передовыми разработками, которые позволяют им достигать высоких
+            скоростей и обеспечивать выдающуюся производительность.</br>В целом, автомобили Ferrari представляют собой не только транспортные средства, но и настоящие произведения искусства, которые сочетают в себе мощь, элегантность и страсть к скорости. Они являются мечтой многих автомобилистов и символом престижа и роскоши.
+          </p>
+          <p class="product-colors">
+            Доступные цвета:
+            <span
+              class="black active"
+              data-color-primary="#ffc800"
+              data-color-sec="#fcdd6a"
+              data-pic="product/pngwing.com - 2023-12-11T214336.118.png"
+            ></span>
+            <span
+              class="red"
+              data-color-primary="#7E021C"
+              data-color-sec="#bd072d"
+              data-pic="product/pngwing.com - 2023-12-11T214240.206.png"
+            ></span>
+            <span
+              class="orange"
+              data-color-primary="#0d178c"
+              data-color-sec="#0353a6"
+              data-pic="product/pngwing.com - 2023-12-11T214251.176.png"
+            ></span>
+          </p>
+          <h3>720,000 $</h3>
+          <button>Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".product-colors span").click(function () {
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $(".active").css("border-color", $(this).attr("data-color-sec"));
+        $("body").css("background", $(this).attr("data-color-primary"));
+        $(".content h2").css("color", $(this).attr("data-color-sec"));
+        $(".content h3").css("color", $(this).attr("data-color-sec"));
+        $(".container .imgBx").css(
+          "background",
+          $(this).attr("data-color-sec")
+        );
+        $(".container .details button").css(
+          "background",
+          $(this).attr("data-color-sec")
+        );
+        $(".imgBx img").attr("src", $(this).attr("data-pic"));
+      });
+    </script>
+  </body>
+</html>
