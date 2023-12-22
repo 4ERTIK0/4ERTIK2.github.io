@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="stylesregistration.css" />
+    <link rel="icon" href="kandinsky-download-1701634859098.png" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
+  </head>
+  <script>
+    function showAlert() {
+      alert("Ведутся технические работы");
+    }
+  </script>
+  <body>
+    <header class="header">
+      <div class="big-container">
+        <nav class="nav">
+          <ul class="menu-list menu-left">
+            <li class="menu-item">
+              <a href="Home.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="registration.html" class="menu-link">Регистрация</a>
+            </li>
+            <li class="menu-item">
+              <a href="shop1.html" class="menu-link">Магазин</a>
+            </li>
+          </ul>
+          <a href="Home.html" class="logo">
+            <img
+              src="kandinsky-download-1701634859098.png"
+              alt="logo"
+              class="logo-img"
+          /></a>
+          <ul class="menu-list menu-right">
+            <li class="menu-item">
+              <a href="partners.html" class="menu-link">Партнеры</a>
+            </li>
+            <li class="menu-item">
+              <a href="autor.html" class="menu-link">О нас</a>
+            </li>
+          </ul>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul class="menu-mobile dropdown_menu">
+            <li class="menu-item">
+              <a href="Home.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+              <a href="registration.html" class="menu-link">Регистрация</a>
+            </li>
+            <li class="menu-item">
+              <a href="shop1.html" class="menu-link">Магазин</a>
+            </li>
+            <li class="menu-item">
+              <a href="partners.html" class="menu-link">Партнеры</a>
+            </li>
+            <li class="menu-item">
+              <a href="autor.html" class="menu-link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="registra">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+          <div class="square" style="--i: 0"></div>
+          <div class="square" style="--i: 1"></div>
+          <div class="square" style="--i: 2"></div>
+          <div class="square" style="--i: 3"></div>
+          <div class="square" style="--i: 4"></div>
+          <div class="square" style="--i: 5"></div>
+          <div class="container">
+            <div class="form">
+              <h2>Регистрация</h2>
+              <form>
+                <div class="inputBox">
+                  <input type="text" placeholder="Имя Пользователя" required />
+                </div>
+                <div class="inputBox">
+                  <input
+                    type="password"
+                    placeholder="Пароль"
+                    class="textform"
+                    required
+                  />
+                </div>
+                <div class="inputBox">
+                  <input
+                    type="submit"
+                    value="Зарегистрироваться"
+                    class="registr"
+                    onclick="showAlert()"
+                  />
+                </div>
+
+                <p class="forgot">
+                  Забыли пароль?<a href="#" onclick="showAlert()">
+                    Восстановить</a
+                  >
+                </p>
+                <p class="forgot">
+                  Впервые на сайте? <a href="#" onclick="showAlert()">Войти</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
